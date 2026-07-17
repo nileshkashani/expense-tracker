@@ -76,7 +76,7 @@ const Charts = ({ summary }) => {
       color: CATEGORY_COLORS[cat.category] || CATEGORY_COLORS.Other,
     };
   });
-
+  //change
   // --- Bar Chart Calculations ---
   // We want to scale bars relative to the category with the HIGHEST spending (so it reaches 100% width)
   const maxCategoryTotal = Math.max(...byCategory.map((c) => c.total), 1);
@@ -104,6 +104,7 @@ const Charts = ({ summary }) => {
               stroke="#f1f5f9"
               strokeWidth="8"
             />
+            
             {donutSegments.map((segment, idx) => (
               <circle
                 key={idx}
