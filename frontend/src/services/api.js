@@ -1,4 +1,5 @@
-import { API_BASE_URL } from '../config';
+
+const API_BASE_URL="https://expense-tracker-0t3k.onrender.com/api"
 
 const getHeaders = () => {
   const token = localStorage.getItem('token');
