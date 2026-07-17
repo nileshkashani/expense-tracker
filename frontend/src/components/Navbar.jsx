@@ -15,8 +15,7 @@ const Navbar = ({ user, onLogout }) => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <span>💸</span>
-        <h1>Antigravity Spend</h1>
+        <h1>Expense Tracker</h1>
       </div>
       
       {user && (

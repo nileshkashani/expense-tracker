@@ -1,14 +1,14 @@
 import React from 'react';
 
 const CATEGORY_COLORS = {
-  Food: '#f87171',
-  Transport: '#fbbf24',
-  Housing: '#38bdf8',
-  Utilities: '#c084fc',
-  Entertainment: '#f472b6',
-  Health: '#2dd4bf',
-  Shopping: '#818cf8',
-  Other: '#a3a3a3',
+  Food: '#065f46',
+  Transport: '#334155',
+  Housing: '#0369a1',
+  Utilities: '#5b21b6',
+  Entertainment: '#92400e',
+  Health: '#0f766e',
+  Shopping: '#3730a3',
+  Other: '#52525b',
 };
 
 const Charts = ({ summary }) => {
@@ -29,15 +29,23 @@ const Charts = ({ summary }) => {
       <div className="charts-grid">
         <div className="glass-panel chart-card">
           <h4 className="chart-title">Category Breakdown</h4>
-          <div className="empty-state">
-            <span className="empty-icon">📊</span>
+          <div className="empty-state" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-dim)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '8px' }}>
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              <path d="M2 12h20"></path>
+            </svg>
             <p>Add some expenses to see visual insights.</p>
           </div>
         </div>
         <div className="glass-panel chart-card">
           <h4 className="chart-title">Spending Intensity</h4>
-          <div className="empty-state">
-            <span className="empty-icon">📈</span>
+          <div className="empty-state" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-dim)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '8px' }}>
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
             <p>Add some expenses to see visual insights.</p>
           </div>
         </div>
@@ -46,7 +54,7 @@ const Charts = ({ summary }) => {
   }
 
   // --- SVG Donut Calculations ---
-  const radius = 50;
+  const radius = 60;
   const circumference = 2 * Math.PI * radius; // ~314.16
 
   // Calculate percentages and accumulate angles
@@ -93,8 +101,8 @@ const Charts = ({ summary }) => {
               cy="80"
               r={radius}
               fill="transparent"
-              stroke="rgba(255,255,255,0.03)"
-              strokeWidth="18"
+              stroke="#f1f5f9"
+              strokeWidth="8"
             />
             {donutSegments.map((segment, idx) => (
               <circle
@@ -105,7 +113,7 @@ const Charts = ({ summary }) => {
                 r={radius}
                 fill="transparent"
                 stroke={segment.color}
-                strokeWidth="18"
+                strokeWidth="8"
                 strokeDasharray={segment.strokeDashArray}
                 strokeDashoffset={segment.strokeDashOffset}
                 title={`${segment.category}: ${segment.percentage.toFixed(1)}%`}

@@ -34,22 +34,22 @@
   --text-dim: #94a3b8;
 
   /* Category Palette - Solid Muted Backgrounds with Darker Text */
-  --cat-food-bg: #fee2e2;
-  --cat-food-txt: #991b1b;
-  --cat-transport-bg: #fef3c7;
-  --cat-transport-txt: #92400e;
+  --cat-food-bg: #d1fae5;
+  --cat-food-txt: #065f46;
+  --cat-transport-bg: #f1f5f9;
+  --cat-transport-txt: #334155;
   --cat-housing-bg: #e0f2fe;
-  --cat-housing-txt: #075985;
+  --cat-housing-txt: #0369a1;
   --cat-utilities-bg: #f3e8ff;
-  --cat-utilities-txt: #6b21a8;
-  --cat-entertainment-bg: #fce7f3;
-  --cat-entertainment-txt: #9d174d;
+  --cat-utilities-txt: #5b21b6;
+  --cat-entertainment-bg: #fef3c7;
+  --cat-entertainment-txt: #92400e;
   --cat-health-bg: #ccfbf1;
-  --cat-health-txt: #115e59;
+  --cat-health-txt: #0f766e;
   --cat-shopping-bg: #e0e7ff;
   --cat-shopping-txt: #3730a3;
   --cat-other-bg: #f4f4f5;
-  --cat-other-txt: #3f3f46;
+  --cat-other-txt: #52525b;
 
   /* Transitions */
   --transition-fast: 0.15s ease;
@@ -503,9 +503,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .summary-card.total { border-left-color: var(--color-primary); }
-.summary-card.month { border-left-color: var(--color-success); }
-.summary-card.avg { border-left-color: var(--color-warning); }
-.summary-card.top { border-left-color: var(--color-secondary); }
+.summary-card.month { border-left-color: var(--color-primary); }
+.summary-card.avg { border-left-color: var(--color-primary); }
+.summary-card.top { border-left-color: var(--color-primary); }
 
 .summary-label {
   font-size: 0.78rem;
@@ -574,13 +574,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .donut-segment {
   fill: none;
-  stroke-width: 14px;
+  stroke-width: 8px;
   transition: stroke-width var(--transition-fast), stroke-dasharray var(--transition-normal);
   cursor: pointer;
 }
 
 .donut-segment:hover {
-  stroke-width: 16px;
+  stroke-width: 10px;
 }
 
 .donut-hole {

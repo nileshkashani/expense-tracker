@@ -42,12 +42,12 @@ const AuthView = ({ onAuthSuccess, addToast }) => {
 
   return (
     <div className="auth-container">
-      <div className="auth-glow-circle circle-1"></div>
-      <div className="auth-glow-circle circle-2"></div>
-      
       <div className="glass-panel auth-card">
         <div className="auth-logo">
-          <span className="logo-icon">💸</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+            <line x1="12" y1="1" x2="12" y2="23"></line>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
           <h2>Antigravity Spend</h2>
         </div>
         

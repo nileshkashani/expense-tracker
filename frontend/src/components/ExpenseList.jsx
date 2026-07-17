@@ -26,8 +26,11 @@ const ExpenseList = ({ expenses, onEdit, onDelete, onAddNewClick }) => {
       </div>
 
       {expenses.length === 0 ? (
-        <div className="empty-state">
-          <div className="empty-icon">💸</div>
+        <div className="empty-state" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--text-dim)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '12px' }}>
+            <line x1="12" y1="1" x2="12" y2="23"></line>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
           <p>No expenses found. Reset your filters or log a new transaction.</p>
           <button className="btn btn-primary" onClick={onAddNewClick}>
             Add First Expense
@@ -70,14 +73,20 @@ const ExpenseList = ({ expenses, onEdit, onDelete, onAddNewClick }) => {
                         className="action-icon-btn edit"
                         title="Edit Transaction"
                       >
-                        📝
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 20h9"></path>
+                          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                        </svg>
                       </button>
                       <button
                         onClick={() => onDelete(expense._id)}
                         className="action-icon-btn delete"
                         title="Delete Transaction"
                       >
-                        🗑️
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="3 6 5 6 21 6"></polyline>
+                          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        </svg>
                       </button>
                     </td>
                   </tr>
